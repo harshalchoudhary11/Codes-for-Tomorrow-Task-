@@ -1,0 +1,349 @@
+{
+	"info": {
+		"_postman_id": "51d8f0f0-5955-4f2a-9b72-351906163dfb",
+		"name": "Category&Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32874933",
+		"_collection_link": "https://rcl-chat-support.postman.co/workspace/Harshal~766911cd-b418-47a2-b288-fb105fc0c671/collection/32874933-51d8f0f0-5955-4f2a-9b72-351906163dfb?action=share&source=collection_link&creator=32874933"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login Api",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin@codesfortomorrow.com\",\r\n    \"password\":\"Admin123!@#\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/categoryWSWebApp/authOperation/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoryWSWebApp",
+								"authOperation",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJ0M24yZnlDTnE5NWU2RHdLck85QTQ5V3czZDNlVHhSRFN0allpOXRnNWdZPSIsImlhdCI6MTc2MzIyNDcwOCwiZXhwIjoxNzYzMjI4MzA4fQ.jOoNbycyBUx7y716d1xygOxm8bXWcFk0hId0EWd8sVc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Salon Services\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/categoryWSWebApp/categoryOperation/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoryWSWebApp",
+								"categoryOperation",
+								"category"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Category",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJ0M24yZnlDTnE5NWU2RHdLck85QTQ5V3czZDNlVHhSRFN0allpOXRnNWdZPSIsImlhdCI6MTc2MzIyNDcwOCwiZXhwIjoxNzYzMjI4MzA4fQ.jOoNbycyBUx7y716d1xygOxm8bXWcFk0hId0EWd8sVc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/categoryWSWebApp/categoryOperation/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoryWSWebApp",
+								"categoryOperation",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJ0M24yZnlDTnE5NWU2RHdLck85QTQ5V3czZDNlVHhSRFN0allpOXRnNWdZPSIsImlhdCI6MTc2MzIyNDcwOCwiZXhwIjoxNzYzMjI4MzA4fQ.jOoNbycyBUx7y716d1xygOxm8bXWcFk0hId0EWd8sVc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Updated Category Name\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/categoryWSWebApp/categoryOperation/category/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoryWSWebApp",
+								"categoryOperation",
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJ0M24yZnlDTnE5NWU2RHdLck85QTQ5V3czZDNlVHhSRFN0allpOXRnNWdZPSIsImlhdCI6MTc2MzIyNDcwOCwiZXhwIjoxNzYzMjI4MzA4fQ.jOoNbycyBUx7y716d1xygOxm8bXWcFk0hId0EWd8sVc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/categoryWSWebApp/categoryOperation/category/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoryWSWebApp",
+								"categoryOperation",
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Services",
+			"item": [
+				{
+					"name": "Create Services",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJ0M24yZnlDTnE5NWU2RHdLck85QTQ5V3czZDNlVHhSRFN0allpOXRnNWdZPSIsImlhdCI6MTc2MzIyNDcwOCwiZXhwIjoxNzYzMjI4MzA4fQ.jOoNbycyBUx7y716d1xygOxm8bXWcFk0hId0EWd8sVc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Hair Cut\",\r\n    \"type\": \"VIP\",\r\n    \"priceOptions\": [\r\n        {\r\n            \"duration\": \"30 mins\",\r\n            \"price\": 100,\r\n            \"type\": \"Hourly\"\r\n        },\r\n        {\r\n            \"duration\": \"1 hour\",\r\n            \"price\": 180,\r\n            \"type\": \"Hourly\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/categoryWSWebApp/servicesOperation/2/service",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoryWSWebApp",
+								"servicesOperation",
+								"2",
+								"service"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Category",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJ0M24yZnlDTnE5NWU2RHdLck85QTQ5V3czZDNlVHhSRFN0allpOXRnNWdZPSIsImlhdCI6MTc2MzIyNDcwOCwiZXhwIjoxNzYzMjI4MzA4fQ.jOoNbycyBUx7y716d1xygOxm8bXWcFk0hId0EWd8sVc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/categoryWSWebApp/servicesOperation/2/services",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoryWSWebApp",
+								"servicesOperation",
+								"2",
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJ0M24yZnlDTnE5NWU2RHdLck85QTQ5V3czZDNlVHhSRFN0allpOXRnNWdZPSIsImlhdCI6MTc2MzIyNDcwOCwiZXhwIjoxNzYzMjI4MzA4fQ.jOoNbycyBUx7y716d1xygOxm8bXWcFk0hId0EWd8sVc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Premium HairCut\",\r\n    \"type\": \"VIP\",\r\n    \"priceOptions\": [\r\n        {\r\n            \"duration\": \"30 mins\",\r\n            \"price\": 120,\r\n            \"type\": \"Hourly\"\r\n        },\r\n        {\r\n            \"duration\": \"1 hour\",\r\n            \"price\": 200,\r\n            \"type\": \"Hourly\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/categoryWSWebApp/servicesOperation/1/service/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoryWSWebApp",
+								"servicesOperation",
+								"1",
+								"service",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJ0M24yZnlDTnE5NWU2RHdLck85QTQ5V3czZDNlVHhSRFN0allpOXRnNWdZPSIsImlhdCI6MTc2MzIyNDcwOCwiZXhwIjoxNzYzMjI4MzA4fQ.jOoNbycyBUx7y716d1xygOxm8bXWcFk0hId0EWd8sVc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/categoryWSWebApp/servicesOperation/1/service/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoryWSWebApp",
+								"servicesOperation",
+								"1",
+								"service",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
